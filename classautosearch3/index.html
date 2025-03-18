@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>初中数学微课搜索</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+        }
+
+        input[type="text"] {
+            padding: 10px;
+            width: 300px;
+            margin-right: 10px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="title"></h1>
+    <p id="description"></p>
+    <input type="text" id="searchInput" placeholder="输入搜索关键词">
+    <button onclick="searchMicroLessons()">搜索</button>
+
+    <script src="script.js"></script>
+    <script>
+        // 初始化语言
+        const lang = navigator.language.split('-')[0];
+        loadLanguage(lang);
+    </script>
+</body>
+
+</html>
