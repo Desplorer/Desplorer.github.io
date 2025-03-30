@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Progress Bar</title>
+    <style>
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+        }
+
+        .progress-container {
+            width: 100%;
+            background-color: #f3f3f3;
+            margin-top: 20px;
+            display: none;
+        }
+
+        .progress-bar {
+            width: 0%;
+            height: 30px;
+            background-color: #4caf50;
+            text-align: center;
+            line-height: 30px;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <button id="startButton">开始加载</button>
+    <div class="progress-container" id="progressContainer">
+        <div class="progress-bar" id="progressBar"></div>
+    </div>
+
+    <script>
+        const startButton = document.getElementById('startButton');
+        const progressContainer = document.getElementById('progressContainer');
+        const progressBar = document.getElementById('progressBar');
+
+        startButton.addEventListener('click', function () {
+            progressContainer.style.display = 'block';
+            let currentProgress = 0;
+            let step = 0;
+
+            function updateProgress() {
+                if (step === 4) {
+                    currentProgress = 100;
+                    progressBar.style.width = currentProgress + '%';
+                    progressBar.textContent = currentProgress + '%';
+                    return;
+                }
+                const remainingSteps = 4 - step;
+                const maxIncrement = Math.floor((100 - currentProgress) / remainingSteps);
+                const randomIncrement = Math.floor(Math.random() * maxIncrement) + 1;
+                currentProgress += randomIncrement;
+                progressBar.style.width = currentProgress + '%';
+                progressBar.textContent = currentProgress + '%';
+                step++;
+                setTimeout(updateProgress, 1000);
+            }
+
+            updateProgress();
+        });
+    </script>
+</body>
+
+</html>
+    
