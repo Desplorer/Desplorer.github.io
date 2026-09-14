@@ -1,0 +1,84 @@
+* {
+	box-sizing: border-box;
+	outline: none;
+}
+
+a {
+	color: rgb(255, 166, 23);
+	text-decoration: none;
+	transition: 0.25s;
+}
+
+button {
+	background-color: rgb(174, 184, 186);
+	text-decoration: none;
+	transition: 0.25s;
+}
+
+button:hover {
+	filter: brightness(1.2);
+	color: rgb(255, 157, 0)
+}
+
+button:active {
+	filter: brightness(0.8);
+	color: rgb(255, 0, 0)
+}
+
+a:hover {
+	filter: brightness(1.2);
+}
+
+a:active {
+	filter: brightness(0.8);
+}
+
+body {
+	background-color: rgb(30, 30, 30);
+	color: white;
+	font-family: Helvetica, sans-serif;
+	margin: 8px;
+}
+
+footer {
+	color: rgba(255, 255, 255, 0.6);
+	font-size: small;
+	padding: 15px;
+}
+
+header {
+	-webkit-backdrop-filter: blur(30px) saturate(1.5);
+	backdrop-filter: blur(30px) saturate(1.5);
+	background-color: rgba(255, 255, 255, 0.1);
+	border-radius: 10px;
+	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+	padding: 12px 15px;
+}
+
+h1 {
+	margin: 15px 0;
+}
+
+main {
+	padding: 15px;
+}
+
+p {
+	margin: 10px 0;
+}
+
+.bg-img {
+	background-attachment: fixed;
+	background-image: url("https://wmimg.com/i/2117/2026/04/69d372130dec3.jpeg");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 100%;
+	left: 0;
+	opacity: 0.5;
+	position: fixed;
+	top: 0;
+	transform: scale(1.1);
+	width: 100%;
+	z-index: -1;
+}
